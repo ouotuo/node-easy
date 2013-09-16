@@ -1,1 +1,1 @@
-module.exports.aa="b"
+module.exports.Config=require "./config"
