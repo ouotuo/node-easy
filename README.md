@@ -19,10 +19,10 @@ npm install node-easy
 
 
 #####开发环境
--npm install   安装包
--grunt watch   一边写coffeescript，一边编译成javascript 
--grunt coffee  编译成javascript
--grunt test    测试
+-  npm install   安装包
+-  grunt watch   一边写coffeescript，一边编译成javascript 
+-  grunt coffee  编译成javascript
+-  grunt test    测试
 
 
 #####例子
