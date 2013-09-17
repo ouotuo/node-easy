@@ -31,6 +31,11 @@ module.exports = (grunt) ->
                 files:[
                     {cwd:src,src:['**/*.json','**/*.js'],dest:lib,expand:true,flatten:false,filter:'isFile'}
                 ]
+            testsrc_to_testlib:
+                files:[
+                    {cwd:testsrc,src:['**/*.json','**/*.js'],dest:testlib,expand:true,flatten:false,filter:'isFile'}
+                ]
+
         exec:
             run:
                 cmd: 'node index.js'
@@ -67,7 +72,7 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks('grunt-exec')
     grunt.loadNpmTasks('grunt-contrib-jasmine-node')
 
-    grunt.registerTask('test',['clean:testlib','coffee:test','jasmine-node'])
+    grunt.registerTask('test',['clean:testlib','coffee:test','copy:testsrc_to_testlib','jasmine-node'])
     grunt.registerTask('run',['exec:run'])
     grunt.registerTask('compile',['clean:lib','coffee','copy:src_to_lib'])
     grunt.registerTask('default',"compile")

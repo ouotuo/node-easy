@@ -73,3 +73,4 @@ loadConfig=(dir,env='test')->
 
 
 module.exports.loadConfig=loadConfig
+module.exports.configFile=configFile

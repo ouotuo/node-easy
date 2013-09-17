@@ -15,11 +15,21 @@ describe 'config test1', ->
         expect(config.index1.http.port).toEqual(4001)
         expect(config.index1.logDir).toEqual('test1')
 
+        Config.configFile config,path.join __dirname,"config1.json"
+
+        expect(config.app).toEqual('app.json')
+        expect(config.person.name).toEqual("json")
+        expect(config.http.port).toEqual(4000)
+
         done()
 		
-	it 'b test', (done)->
-        expect(false).toBeFalsy()
-        expect(2).toBeGreaterThan(1)
+	it 'load from multi file', (done)->
+        dir=path.join __dirname,"./config2"
+        config = Config.loadConfig dir
+
+        expect(config.app).toEqual('test')
+        expect(config.a.name).toEqual('a')
+        expect(config.b.name).toEqual('b')
         done()
 
 

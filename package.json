@@ -1,6 +1,13 @@
 {
   "name": "node-easy",
   "version": "0.0.1",
+  "description": "node easy utils",
+  "author":"ouotuo <ouotuo@gmail.com>",
+  "keywords":"node easy util",
+  "homepage":"https://github.com/ouotuo",
+  "repository":{"type":"git","url":"https://github.com/ouotuo/node-easy"},
+  "bugs":{"url":"https://github.com/ouotuo/node-easy/issues"},
+  "main":"index",
   "private": false,
   "scripts": {
     "start": "index.js"

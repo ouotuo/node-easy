@@ -1,0 +1,9 @@
+{
+    "app":"app.json",
+    "person":{
+        "name":"json"
+    },
+    "http":{
+        "port":4000
+    }
+}

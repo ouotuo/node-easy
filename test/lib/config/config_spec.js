@@ -18,11 +18,19 @@
       expect(config.index1.app).toEqual('test');
       expect(config.index1.http.port).toEqual(4001);
       expect(config.index1.logDir).toEqual('test1');
+      Config.configFile(config, path.join(__dirname, "config1.json"));
+      expect(config.app).toEqual('app.json');
+      expect(config.person.name).toEqual("json");
+      expect(config.http.port).toEqual(4000);
       return done();
     });
-    return it('b test', function(done) {
-      expect(false).toBeFalsy();
-      expect(2).toBeGreaterThan(1);
+    return it('load from multi file', function(done) {
+      var config, dir;
+      dir = path.join(__dirname, "./config2");
+      config = Config.loadConfig(dir);
+      expect(config.app).toEqual('test');
+      expect(config.a.name).toEqual('a');
+      expect(config.b.name).toEqual('b');
       return done();
     });
   });
