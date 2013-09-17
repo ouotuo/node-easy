@@ -11,11 +11,11 @@ npm install node-easy
 
 
 #####已经实现
--加载配置
+- 加载配置
 
 
 #####计划开发
--http request 
+- http request 
 
 
 #####开发环境
